@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <title>Etudiants</title>
+</head>
+
+<body class="bg-gray-200">
+
+  <header>
+    <div class="flex justify-center items-center bg-green-500 rounded-b-full ">
+      <h1 class="text-2xl italic  font-bold text-white ">System Gestion Etudiant</h1>
+      <p class="text-white pl-10 pt-5 italic">développer par charaf eddine</p>
+    </div>
+  </header>
+
+
+
+  <!-- <section class="flex flex-col items-center pt-6 justify-center  rounded-t-full">
+
+    <div class="flex flex-row items-center justify-center">
+      <div class="flex flex-row items-center justify-center">
+            <h1 class="font-bold mr-2">Add Etudiant   </h1>
+          <button
+            id="add"
+            class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Add
+          </button>
+        </div>
+
+      <div class="flex flex-row items-center justify-center pl-12">
+        <form action="">
+          <input type="text" name="sherch" id="sherch" class=" h-9  rounded">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+  </section> -->
+
+
+
+
+
+  <div class="  backdrop-saturate-125  bg-white/30 rounded px-8 mt-5 pt-6 pb-8 mb-4 flex flex-col ">
+   
+    <form action="" id="form">
+      <div class="-mx-3 md:flex mb-6">
+        <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="Numero-unique">
+            Numéro unique
+          </label>
+          <input
+            class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
+            id="Numero-unique" type="text" disabled required />
+        </div>
+        <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="first-name">
+            First Name
+          </label>
+          <input required
+            class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
+            id="first-name" type="text" />
+          <!-- <p class="text-red text-xs italic">Please fill out this field.</p> -->
+        </div>
+        <div class="md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="last-name">
+            Last Name
+          </label>
+          <input
+            class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+            id="last-name" required type="text" />
+        </div>
+        <div class="md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="Date">
+            Date of birth
+          </label>
+          <input
+            class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+            id="Date" type="date" />
+        </div>
+
+      </div>
+      <div class="-mx-3 md:flex mb-6">
+        <div class="md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="Département">
+            Département
+          </label>
+          <input
+            class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+            id="Département" required type="text" />
+        </div>
+        <div class="md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="Note">
+            Note générale
+          </label>
+          <input
+            class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+            id="Note" required type="number" />
+        </div>
+        <div class="md:w-full px-3">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="email">
+            Email
+          </label>
+          <input
+            class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3"
+            id="email" type="email" required placeholder="example@gmail.com" />
+        </div>
+        <div class="md:w-full px-3">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="password">
+            Password
+          </label>
+          <input
+            class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3"
+            id="password" required type="password" placeholder="******************" />
+          <p class="text-grey-dark text-xs italic">
+            Make it as long and as crazy as you'd like
+          </p>
+        </div>
+      </div>
+      <div class="-mx-3 md:flex mb-2">
+        <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="city">
+            City
+          </label>
+          <input
+            class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+            id="city" type="text" />
+        </div>
+        <div class="md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="state">
+            State
+          </label>
+          <div class="relative">
+            <select
+              class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded"
+              id="state">
+              <option></option>
+              <option>Missouri</option>
+              <option>Texas</option>
+              <option>Casa</option>
+              <option>Rabat</option>
+              <option>Tanger</option>
+              <option>Marakech</option>
+
+            </select>
+
+          </div>
+        </div>
+        <div class="md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="zip">
+            Zip
+          </label>
+          <input
+            class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+            id="zip" type="text" placeholder="00000" />
+        </div>
+      </div>
+      <form action="">
+        <div class=" flex flex-col justify-center items-center mt-12">
+          <button type="reset"
+            class=" bg-red-500  text-grey-darker border border-grey-lighter rounded py-3 px-4">Reset</button>
+          <button type="submit"
+            class=" bg-green-500  text-grey-darker border border-grey-lighter rounded py-3 px-4">Submit</button>
+            <h1 id="erreur" class="font-bold text-red-500"></h1>
+            <h1 id="validation" class="font-bold text-green-500"></h1>
+        </div>
+
+      </form>
+    </form>
+  </div>
+
+
+
+  <div class="flex items-center justify-center">
+    <div class="flex flex-col items-start justify-start">
+      <!-- <h1 class="font-bold mr-2">Add Etudiant   </h1> -->
+      <select id="add" class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <option value=""></option>
+        <option value="Tri par Nom" class="bg-gray-500">Tri par Nom</option>
+        <option value="Tri par Note" class="bg-gray-500">Tri par Note</option>
+        <option value="Tri par Departement" class="bg-gray-500">Tri par Departement</option>
+
+      </select>
+    </div>
+    <div class="flex flex-col items-end  justify-end pl-12">
+      <form action="">
+        <label for="date" class="font-bold mr-2">Tri par Date</label>
+        <input type="date" name="date" id="date" class=" h-9  rounded bg-green-500">
+        <!-- <button type="submit">Search</button> -->
+      </form>
+    </div>
+
+    <div class="flex flex-col items-end  justify-end pl-12">
+      <form action="">
+        <input type="text" name="sherch" id="sherch" class=" h-9  rounded">
+        <button type="submit" class="font-bold mr-2 ">Search</button>
+      </form>
+    </div>
+
+  </div>
+
+
+
+  <div class="container mx-auto p-4">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50">
+        <tr>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Numero-unique
+          </th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            first-name
+          </th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            last-name
+          </th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Date
+          </th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Département
+          </th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Note
+          </th>
+
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            state
+          </th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Zip
+          </th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            city
+          </th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Email
+          </th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Action
+          </th>
+        </tr>
+      </thead>
+      <tbody id="Tap">
+
+      </tbody>
+
+      <script src="test1.js"></script>
+</body>
+
+</html>
